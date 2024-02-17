@@ -9,4 +9,5 @@ For this project I used:
 - Java 17.
 - JUnit for testing.
 - JSoup for HTML manipulation.
+
 Note: This project was made using NetBeans 20.

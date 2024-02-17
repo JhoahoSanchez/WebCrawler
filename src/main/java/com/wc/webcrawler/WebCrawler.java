@@ -28,7 +28,7 @@ public class WebCrawler {
 
             for (int i = 0; i < entryElements.size() - 1; i++) {
                 if (entryElements.get(i).select("tr").first().className().equals("athing")) {
-                    title = entryElements.get(i).select("span.titleline a").text();
+                    title = entryElements.get(i).select("span.titleline").text().split("\\(")[0].trim();
                     numOrder = Integer.parseInt(entryElements.get(i).select("span.rank").text().split("\\.")[0]);
                     i++;
                 }
@@ -53,6 +53,10 @@ public class WebCrawler {
     }
 
     public List<Entry> filterAndSort(List<Entry> entries, EntryFilter condition, Comparator<Entry> comparator) {
+        
+        //TODO: Filter all previous entries with more than five words in the title ordered by the number of comments first.
+        //TODO: Filter all previous entries with less than or equal to five words in the title ordered by points.
+        
         List<Entry> filteredEntries = new ArrayList<>();
 
         for (Entry entry : entries) {

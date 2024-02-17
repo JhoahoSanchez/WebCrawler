@@ -1,1 +1,4 @@
+com\wc\webcrawler\Entry.class
+com\wc\webcrawler\Main.class
 com\wc\webcrawler\WebCrawler.class
+com\wc\webcrawler\EntryFilter.class

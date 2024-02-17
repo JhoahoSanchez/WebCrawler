@@ -8,13 +8,13 @@ public class Entry {
     
     private final String title;
     private final int numOrder;
-    private final int comments;
+    private final int numComments;
     private final int points;
 
     public Entry(String title, int numOrder, int comments, int points) {
         this.title = title;
         this.numOrder = numOrder;
-        this.comments = comments;
+        this.numComments = comments;
         this.points = points;
     }
 
@@ -27,16 +27,18 @@ public class Entry {
     }
 
     public int getComments() {
-        return comments;
+        return numComments;
     }
 
     public int getPoints() {
         return points;
     }
 
+    
+    
     @Override
     public String toString() {
-        return "Entry{" + "title=" + title + ", numOrder=" + numOrder + ", comments=" + comments + ", points=" + points + '}';
+        return "Entry{" + "title=" + title + ", numOrder=" + numOrder + ", comments=" + numComments + ", points=" + points + '}';
     }
     
     

@@ -1,4 +1,3 @@
-
 package com.wc.webcrawler;
 
 import java.util.List;
@@ -10,24 +9,22 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        String url = "https://news.ycombinator.com";
 
         WebCrawler wc = new WebCrawler();
-        //List<Entry> entries = wc.getEntries(url);
 
-        List<Entry> l = wc.getEntries(url);
-        
-        for (Entry entry : l) {
-            System.out.println("entry = " + entry);
-        }
-        
-        System.out.println("Filtered");
-        
-        List<Entry> fs = wc.filterAndSort(l, 0);
-        
-        System.out.println("Filtered 2");
-        
-        List<Entry> fs2 = wc.filterAndSort(l, 1);
+        List<Entry> entries = wc.getEntries();
 
+        System.out.println("\t*****\tEntries\t*****\n");
+        entries.forEach(System.out::println);
+
+        System.out.println("\n\t*****\tEntries with more than 5 words in the title\t*****\n");
+
+        List<Entry> fs = wc.filterAndSort(entries, 0);
+        fs.forEach(System.out::println);
+
+        System.out.println("\n\t*****\tEntries with less than 5 words in the title\t*****\n");
+
+        List<Entry> fs2 = wc.filterAndSort(entries, 1);
+        fs2.forEach(System.out::println);
     }
 }

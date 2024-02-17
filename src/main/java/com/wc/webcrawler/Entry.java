@@ -5,7 +5,7 @@ package com.wc.webcrawler;
  * @author Jhoaho
  */
 public class Entry {
-    
+
     private final String title;
     private final int numOrder;
     private final int numComments;
@@ -34,13 +34,9 @@ public class Entry {
         return points;
     }
 
-    
-    
     @Override
     public String toString() {
-        return "Entry{" + "title=" + title + ", numOrder=" + numOrder + ", comments=" + numComments + ", points=" + points + '}';
+        return "Entry{" + "numOrder=" + numOrder + ", title=" + title + ", comments=" + numComments + ", points=" + points + '}';
     }
-    
-    
-    
+
 }

@@ -1,7 +1,6 @@
 
 package com.wc.webcrawler;
 
-import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -18,10 +17,17 @@ public class Main {
 
         List<Entry> l = wc.getEntries(url);
         
-        for (Entry entry : l) {
-            System.out.println("entry = " + entry);
-        }
+//        for (Entry entry : l) {
+//            System.out.println("entry = " + entry);
+//        }
         
+        System.out.println("Filtered");
+        
+        List<Entry> fs = wc.filterAndSort(l, 0);
+        
+        System.out.println("Filtered 2");
+        
+        List<Entry> fs2 = wc.filterAndSort(l, 1);
 
     }
 }

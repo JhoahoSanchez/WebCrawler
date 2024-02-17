@@ -17,9 +17,9 @@ public class Main {
 
         List<Entry> l = wc.getEntries(url);
         
-//        for (Entry entry : l) {
-//            System.out.println("entry = " + entry);
-//        }
+        for (Entry entry : l) {
+            System.out.println("entry = " + entry);
+        }
         
         System.out.println("Filtered");
         
